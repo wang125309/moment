@@ -296,9 +296,11 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
         },10);
     };
     var b_cnt = 1;
-    $scope.b = function() {
+    $scope.b = function(tt) {
         b_cnt ++;
-
+        if(tt!='b2' && tt!='b6' && tt != 'b10') {
+            return ;
+        }
         if(b_cnt == 2) {
             var go_inverval = setInterval(function(){
                 if(b_cnt == 6) {
@@ -341,6 +343,10 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                                 $(".black-area").css("display","none");
                                 $(".video-area").css("display","block");
                                 $(".video-area video")[0].play();
+                                $(".video-area video")[0].onended= function() {
+                                    $(".video-area").css("display","none");
+                                    $(".last-area").css("display","block");
+                                };
                             },1200);
                         }
                         $(".b"+(i-1)).css("display","none");
