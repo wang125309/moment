@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6502c3f-1c97-4dff-865b-2b3c58fe9fd6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rev-js/rev-manifest.json" afterPath="$PROJECT_DIR$/rev-js/rev-manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js-modify/edit/index.js" afterPath="$PROJECT_DIR$/static/js-modify/edit/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js-modify/index.js" afterPath="$PROJECT_DIR$/static/js-modify/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/index.js" afterPath="$PROJECT_DIR$/static/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/jade/index.jade" afterPath="$PROJECT_DIR$/template/jade/index.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="friend.iws" />
     <ignored path=".idea/workspace.xml" />
