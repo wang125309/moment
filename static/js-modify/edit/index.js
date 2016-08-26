@@ -297,74 +297,78 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
     };
     var b_cnt = 1;
     $scope.b = function(tt) {
-        b_cnt ++;
+
         if(tt!='b1' && tt!='b5' && tt!='b9') {
             return ;
         }
-        if(b_cnt == 2) {
-            var go_inverval = setInterval(function(){
-                if(b_cnt == 6) {
-                    clearInterval(go_inverval);
-                    b_cnt --;
-                }
-                else {
-                    $(".b"+(b_cnt-1)).css("display","none");
-                    $(".b"+b_cnt).css("display","block");
-                    b_cnt ++;
-                }
+        else {
+            b_cnt ++;
+            if(b_cnt == 2) {
+                var go_inverval = setInterval(function(){
+                    if(b_cnt == 6) {
+                        clearInterval(go_inverval);
+                        b_cnt --;
+                    }
+                    else {
+                        $(".b"+(b_cnt-1)).css("display","none");
+                        $(".b"+b_cnt).css("display","block");
+                        b_cnt ++;
+                    }
 
-            },200)
+                },200)
+            }
+            if(b_cnt == 6) {
+                var go_inverval = setInterval(function(){
+                    if(b_cnt == 10) {
+                        clearInterval(go_inverval);
+                        b_cnt --;
+                    }
+                    else {
+                        $(".b"+(b_cnt-1)).css("display","none");
+                        $(".b"+b_cnt).css("display","block");
+                        b_cnt ++;
+                    }
+
+                },200)
+            }
+            if(b_cnt == 10) {
+                var go_inverval = setInterval(function(){
+                    if(b_cnt == 12) {
+                        clearInterval(go_inverval);
+
+                        var i = 12;
+                        var black_interval = setInterval(function(){
+                            if(i == 20) {
+                                clearInterval(black_interval);
+                                $(".black-hole").css("display","block");
+                                setTimeout(function(){
+                                    $(".black-area").css("display","none");
+                                    $(".video-area").css("display","block");
+                                    $(".video-area video")[0].play();
+                                    $(".video-area video")[0].onended= function() {
+                                        $(".video-area").css("display","none");
+                                        $(".last-area").css("display","block");
+                                    };
+                                },1200);
+                            }
+                            $(".b"+(i-1)).css("display","none");
+                            $(".b"+i).css("display","block");
+
+                            i ++ ;
+                        },500);
+                    }
+                    else {
+                        $(".b"+(b_cnt-1)).css("display","none");
+                        $(".b"+b_cnt).css("display","block");
+                        b_cnt ++;
+                    }
+
+                },200)
+            }
+            $(".b"+(b_cnt-1)).css("display","none");
+            $(".b"+b_cnt).css("display","block");
         }
-        if(b_cnt == 6) {
-            var go_inverval = setInterval(function(){
-                if(b_cnt == 10) {
-                    clearInterval(go_inverval);
-                    b_cnt --;
-                }
-                else {
-                    $(".b"+(b_cnt-1)).css("display","none");
-                    $(".b"+b_cnt).css("display","block");
-                    b_cnt ++;
-                }
 
-            },200)
-        }
-        if(b_cnt == 10) {
-            var go_inverval = setInterval(function(){
-                if(b_cnt == 12) {
-                    clearInterval(go_inverval);
-
-                    var i = 12;
-                    var black_interval = setInterval(function(){
-                        if(i == 20) {
-                            clearInterval(black_interval);
-                            $(".black-hole").css("display","block");
-                            setTimeout(function(){
-                                $(".black-area").css("display","none");
-                                $(".video-area").css("display","block");
-                                $(".video-area video")[0].play();
-                                $(".video-area video")[0].onended= function() {
-                                    $(".video-area").css("display","none");
-                                    $(".last-area").css("display","block");
-                                };
-                            },1200);
-                        }
-                        $(".b"+(i-1)).css("display","none");
-                        $(".b"+i).css("display","block");
-
-                        i ++ ;
-                    },500);
-                }
-                else {
-                    $(".b"+(b_cnt-1)).css("display","none");
-                    $(".b"+b_cnt).css("display","block");
-                    b_cnt ++;
-                }
-
-            },200)
-        }
-        $(".b"+(b_cnt-1)).css("display","none");
-        $(".b"+b_cnt).css("display","block");
 
     };
 }]);
