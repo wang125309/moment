@@ -35,7 +35,7 @@ body(ng-controller="Ctrl",ng-cloak)
 		.find
 		- var b = ['b1','b2','b3','b4','b5','b6','b7','b8','b9','b10','b11','b12','b13','b14','b15','b16','b17','b18','b19','b20'];
 		- for i in b
-			div(ng-click="b('#{i})'",class="#{i}")
+			div(ng-click="b('#{i}')",class="#{i}")
 		.black-hole
 	.video-area
 		video(width="100%",src="/moment/static/image/bishengyuan.mp4",preload="auto",x-webkit-airplay="true",webkit-playsinline="true")
