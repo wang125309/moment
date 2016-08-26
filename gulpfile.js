@@ -65,6 +65,7 @@ gulp.task('js-image',function(){
 gulp.task('js',function(){
     gulp.src('./static/js-modify/*.js')
         .pipe(browserify())
+        .pipe(uglify())
         .pipe(gulp.dest('./static/js'))
         .pipe(rev())
         .pipe(gulp.dest('./static/js'))
