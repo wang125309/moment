@@ -5,7 +5,7 @@ require("../../bower_components/swiper/dist/js/swiper.min.js");
 require("../../bower_components/angular/angular.min.js");
 require("../../bower_components/angular-sanitize/angular-sanitize.min.js");
 require("../../bower_components/angular-touch/angular-touch.min.js");
-require("../js/share.min.js");
+require("./share.js");
 
 Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce','$scope',function($sce,$scope){
     var get_emoj = function(emoj) {

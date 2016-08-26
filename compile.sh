@@ -9,3 +9,4 @@ gulp js-image-lib
 gulp js-image
 gulp js
 gulp jade
+gulp jade-final

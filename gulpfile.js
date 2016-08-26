@@ -87,6 +87,11 @@ gulp.task('jade',function(){
     gulp.src(['./rev-css/*.json','./rev-js/*.json','./template/jade/edit/*.jade'])
         .pipe(revCollector())
         .pipe(gulp.dest('./template/jade'))
+
+});
+
+gulp.task('jade-final',function(){
+    gulp.src('./template/jade/*.jade')
         .pipe(jade())
         .pipe(gulp.dest('./template'))
-});
+})
