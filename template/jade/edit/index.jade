@@ -1,0 +1,88 @@
+include ./lib/header.jade
+script.
+	!(function () {
+		var rem;
+		rem = function () {
+			document.documentElement.style.fontSize = (document.documentElement.clientWidth || document.documentElement.clientWidth) + 'px';
+		};
+		rem();
+		window.addEventListener('resize', rem, false);
+		var _hmt = _hmt || []
+	})();
+script(src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js")
+script(src="/moment/static/js/index.js")
+link(href="/moment/static/css/index.css",rel="stylesheet",type="text/css")
+body(ng-controller="Ctrl",ng-cloak)
+	.paopao-area
+		.paopao1
+		.paopao2
+		.paopao3
+		.paopao4
+		.paopao5
+		.paopao6
+		.paopao7
+		.paopao8
+		- var t = ['t1','t2','t3','t4','t5','t6','t7','t8','t9','t10','t11','t12'];
+		- for i in t
+			div(class="#{i}")
+		- var z = ['z1','z2','z3','z4','z5','z6']
+		- for i in z
+			div(class="#{i}")
+		.p1(ng-click="next()")
+		.p2(ng-click="next()")
+		.paopao-find.find
+	.black-area
+		.find
+		- var b = ['b1','b2','b3','b4','b5','b6','b7','b8','b9','b10','b11','b12','b13','b14','b15','b16','b17','b18','b19','b20'];
+		- for i in b
+			div(ng-click="b(#{i})",class="#{i}")
+		.black-hole
+	.video-area
+		video(width="100%",src="/moment/static/image/bishengyuan.mp4",preload="auto",x-webkit-airplay="true",webkit-playsinline="true")
+	.last-area
+	.moment-area
+		.friend-area(ng-repeat="i in data")
+			.avatar-area
+				.avatar(ng-if="i.username!='马睿马同学'",style="background-image:url({{ i.avatar }})")=""
+				.avatar.changeableavatar(ng-if="i.username=='马睿马同学'",style="background-image:url({{ i.avatar }})")=""
+			.message-area
+				.username(ng-bind="i.username")
+				.message-body
+					.message(ng-bind-html="i.feed")
+					.pic-area
+						img.pic(ng-src="{{ i.feedimage }}")
+					.last-line
+						.time(ng-bind="i.time")
+						.pull-out(ng-click="pull_out_menu(i)")
+							.find(ng-click="pull_out_menu(i)",ng-if="i.username=='马睿马同学'",ng-show="shake==true")=""
+							.overflow
+								.pull-out-menu
+									.cell
+										.cai(ng-click="do_cai()")=""
+										.find(ng-click="do_cai()",ng-if="i.username=='马睿马同学'",ng-show="cai==true")=""
+									.cell
+										.zan=""
+									.cell
+										.comment=""
+
+				.comment-area
+					.arrow ◆
+					.zan-area
+						div.zan-icon
+						div.zan-people(ng-repeat="j in i.zans",ng-bind="j")
+					.cai-area
+						div.cai-icon
+						div.cai-people(ng-repeat="j in i.cais",ng-bind="j")
+					.comment-details(ng-repeat="j in i.comment")
+						span.comment-user(ng-bind="j.username")
+						span.comment-message(ng-bind-html="j.message")
+
+script(language="javascript").
+	var _hmt = _hmt || [];
+	(function () {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?44c2ac29cbe237357637f2939d6cec09";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+
