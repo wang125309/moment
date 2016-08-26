@@ -298,7 +298,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
     var b_cnt = 1;
     $scope.b = function(tt) {
         b_cnt ++;
-        if(tt!='b2' && tt!='b6' && tt != 'b10') {
+        if(tt!='b1' && tt!='b5' && tt!='b9') {
             return ;
         }
         if(b_cnt == 2) {
