@@ -326,7 +326,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
         }
         else {
 
-            if(b_cnt == 2) {
+            if(b_cnt == 1) {
                 if(!b2_c) {
                     b2_c = true;
                     b_cnt ++;
@@ -344,7 +344,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                     },200)
                 }
             }
-            if(b_cnt == 6) {
+            if(b_cnt == 5) {
                 if(!b6_c) {
                     b6_c = true;
                     b_cnt ++;
@@ -363,7 +363,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                 }
 
             }
-            if(b_cnt == 10) {
+            if(b_cnt == 9) {
                 if(!b10_c) {
                     b10_c = true;
                     b_cnt ++ ;
