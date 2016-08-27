@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6502c3f-1c97-4dff-865b-2b3c58fe9fd6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rev-css/rev-manifest.json" afterPath="$PROJECT_DIR$/rev-css/rev-manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rev-js/rev-manifest.json" afterPath="$PROJECT_DIR$/rev-js/rev-manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css-modify/edit/index.styl" afterPath="$PROJECT_DIR$/static/css-modify/edit/index.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css-modify/index.styl" afterPath="$PROJECT_DIR$/static/css-modify/index.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js-modify/edit/index.js" afterPath="$PROJECT_DIR$/static/js-modify/edit/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js-modify/index.js" afterPath="$PROJECT_DIR$/static/js-modify/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/index.js" afterPath="$PROJECT_DIR$/static/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/index.html" afterPath="$PROJECT_DIR$/template/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/jade/edit/index.jade" afterPath="$PROJECT_DIR$/template/jade/edit/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/jade/index.jade" afterPath="$PROJECT_DIR$/template/jade/index.jade" />
-    </list>
+    <list default="true" id="a6502c3f-1c97-4dff-865b-2b3c58fe9fd6" name="Default" comment="" />
     <ignored path="friend.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />

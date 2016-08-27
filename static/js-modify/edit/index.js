@@ -210,7 +210,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
     var cai_cnt = 0;
     var already_cai = false;
     $scope.do_cai = function() {
-        if(!already) {
+        if(!already_cai) {
             already_cai = true;
             if (cai_cnt == 0) {
                 $(".changeableavatar").addClass("rotate");
