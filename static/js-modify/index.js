@@ -209,17 +209,19 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
 
     var cai_cnt = 0;
     var already_cai = false;
-    $scope.do_cai = function() {
-        if(!already_cai) {
-            already_cai = true;
+    $scope.do_cai = function(auto) {
+        if(!already_cai || auto==false) {
+            var caiInterval;
             if (cai_cnt == 0) {
                 $(".changeableavatar").addClass("rotate");
-                caiInterval = setInverval(function () {
-                    $scope.do_cai();
-                }, 300);
+
             }
             else if (cai_cnt == 1) {
                 $(".changeableavatar").addClass("down");
+                already_cai = true;
+                caiInterval = setInterval(function () {
+                    $scope.do_cai(false);
+                }, 300);
             }
             else if (cai_cnt == 2) {
                 $($(".pic-area")[$(".pic-area").length - 2]).addClass("rotate-and-down");
@@ -289,8 +291,9 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                     }, 200);
                 }, 1000);
             }
-            cai_cnt++;
+
         }
+        cai_cnt++;
     };
     $scope.next = function() {
         var cnt = 1;
