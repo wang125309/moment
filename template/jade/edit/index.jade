@@ -62,7 +62,7 @@ body
 				.username(ng-bind="i.username")
 				.message-body
 					.message(ng-bind-html="i.feed")
-					.pic-area(ng-if="i.feedimage")
+					.pic-area
 						img.pic(ng-src="{{ i.feedimage }}")
 					.last-line
 						.time(ng-bind="i.time")

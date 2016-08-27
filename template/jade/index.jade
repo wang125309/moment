@@ -11,7 +11,7 @@ script.
 	})();
 script(src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js")
 script(src="/moment/static/js/index-86dcf2f8f2.js")
-link(href="/moment/static/css/index-dec6c0bb48.css",rel="stylesheet",type="text/css")
+link(href="/moment/static/css/index-263167f26d.css",rel="stylesheet",type="text/css")
 body
 	.paopao-area
 		.paopao1
@@ -62,7 +62,7 @@ body
 				.username(ng-bind="i.username")
 				.message-body
 					.message(ng-bind-html="i.feed")
-					.pic-area(ng-if="i.feedimage")
+					.pic-area
 						img.pic(ng-src="{{ i.feedimage }}")
 					.last-line
 						.time(ng-bind="i.time")
