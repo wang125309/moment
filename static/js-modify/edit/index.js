@@ -30,7 +30,7 @@ $(function(){
 });
 
 Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce','$scope',function($sce,$scope){
-    !function(){var a=navigator.userAgent;-1==a.indexOf("iPhone")&&-1==a.indexOf("iPad")&&-1==a.indexOf("iPod")&&-1==a.indexOf("Android")&&(self.location="http://wefire.qq.com/act/a20150826kris/pc/")}();
+    !function(){var a=navigator.userAgent;-1==a.indexOf("iPhone")&&-1==a.indexOf("iPad")&&-1==a.indexOf("iPod")&&-1==a.indexOf("Android")}();
     var browser = {
         versions:function(){
             var u = navigator.userAgent, app = navigator.appVersion;
@@ -397,11 +397,23 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                                     setTimeout(function(){
                                         $(".black-area").css("display","none");
                                         $(".video-area").css("display","block");
-
+                                        var a = document.documentElement.clientHeight, s = document.documentElement.clientWidth;
+                                        function d(e, n) {
+                                            var t, i = s / a, r = 320 / 504;
+                                            t = i < r ? a / 504 :s / 320, $(e).css({
+                                                "-webkit-transform-origin":n,
+                                                "transform-origin":n,
+                                                "-webkit-transform":"scale(" + t + ");",
+                                                transform:"scale(" + t + ");"
+                                            });
+                                        }
+                                        d(".video-area",'center center');
                                         if(browser.versions.ios) {
                                             $(".video-area video")[0].play();
                                         }
                                         else {
+                                            $(".video-area video").attr("controls",true);
+
                                             $(document).one('touchmove',function(e){
                                                 $(".video-area video")[0].play();
                                             })
