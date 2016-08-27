@@ -208,81 +208,89 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
     };
 
     var cai_cnt = 0;
+    var already_cai = false;
     $scope.do_cai = function() {
-        if(cai_cnt == 0) {
-            $(".changeableavatar").addClass("rotate");
-        }
-        else if(cai_cnt == 1) {
-            $(".changeableavatar").addClass("down");
-        }
-        else if(cai_cnt == 2) {
-            $($(".pic-area")[$(".pic-area").length-2]).addClass("rotate-and-down");
-            $($(".message-body .message")[$(".message-body .message").length-1]).addClass("rotate-and-down-left");
-        }
-        else if(cai_cnt == 3) {
-            $($(".avatar")[$(".avatar").length-2]).addClass("rotate-and-down");
-            $($(".last-line")[$(".last-line").length-2]).addClass("rotate-and-down-left");
-        }
-        else if(cai_cnt == 4) {
-            $($(".message-area .username")[$(".message-area .username").length-2]).addClass("rotate-and-down-left");
-            $($(".comment-area .comment-details")[$(".comment-area .comment-details").length-2]).addClass("rotate-and-down-left");
-            $($(".comment-area .comment-details")[$(".comment-area .comment-details").length-5]).addClass("rotate-and-down");
-        }
-        else if(cai_cnt == 5) {
-            $($(".message-area .username")[$(".message-area .username").length-1]).addClass("rotate-and-down-left");
-            $($(".comment-area .comment-details")[$(".comment-area .comment-details").length-3]).addClass("rotate-and-down-left");
-            $($(".comment-area .comment-details")[$(".comment-area .comment-details").length-4]).addClass("rotate-and-down");
-        }
-        else if(cai_cnt == 6) {
-            $($(".comment-area")[$(".comment-area").length-2]).addClass("rotate-and-down-left");
-            $($(".message-body .message")[$(".message-body .message").length-2]).addClass("rotate-and-down");
-        }
-        else if(cai_cnt == 7) {
-            $($(".friend-area")[$(".friend-area").length-3]).addClass("rotate-and-down-left");
-            $($(".friend-area")[$(".friend-area").length-2]).addClass("rotate-and-down-left");
-            $($(".friend-area")[$(".friend-area").length-1]).addClass("rotate-and-down");
-            setTimeout(function(){
-                $(".moment-area").css("display","none");
-                $(".paopao-area").css("display","block");
-                cnt = 1;
-                var interval = setInterval(function(){
-                    $(".paopao"+cnt).css("display","block");
-                    if(cnt > 1) {
+        if(!already) {
+            already_cai = true;
+            if (cai_cnt == 0) {
+                $(".changeableavatar").addClass("rotate");
+                caiInterval = setInverval(function () {
+                    $scope.do_cai();
+                }, 300);
+            }
+            else if (cai_cnt == 1) {
+                $(".changeableavatar").addClass("down");
+            }
+            else if (cai_cnt == 2) {
+                $($(".pic-area")[$(".pic-area").length - 2]).addClass("rotate-and-down");
+                $($(".message-body .message")[$(".message-body .message").length - 1]).addClass("rotate-and-down-left");
+            }
+            else if (cai_cnt == 3) {
+                $($(".avatar")[$(".avatar").length - 2]).addClass("rotate-and-down");
+                $($(".last-line")[$(".last-line").length - 2]).addClass("rotate-and-down-left");
+            }
+            else if (cai_cnt == 4) {
+                $($(".message-area .username")[$(".message-area .username").length - 2]).addClass("rotate-and-down-left");
+                $($(".comment-area .comment-details")[$(".comment-area .comment-details").length - 2]).addClass("rotate-and-down-left");
+                $($(".comment-area .comment-details")[$(".comment-area .comment-details").length - 5]).addClass("rotate-and-down");
+            }
+            else if (cai_cnt == 5) {
+                $($(".message-area .username")[$(".message-area .username").length - 1]).addClass("rotate-and-down-left");
+                $($(".comment-area .comment-details")[$(".comment-area .comment-details").length - 3]).addClass("rotate-and-down-left");
+                $($(".comment-area .comment-details")[$(".comment-area .comment-details").length - 4]).addClass("rotate-and-down");
+            }
+            else if (cai_cnt == 6) {
+                $($(".comment-area")[$(".comment-area").length - 2]).addClass("rotate-and-down-left");
+                $($(".message-body .message")[$(".message-body .message").length - 2]).addClass("rotate-and-down");
+            }
+            else if (cai_cnt == 7) {
+                $($(".friend-area")[$(".friend-area").length - 3]).addClass("rotate-and-down-left");
+                $($(".friend-area")[$(".friend-area").length - 2]).addClass("rotate-and-down-left");
+                $($(".friend-area")[$(".friend-area").length - 1]).addClass("rotate-and-down");
+                setTimeout(function () {
+                    clearInterval(caiInterval);
+                    $(".moment-area").css("display", "none");
+                    $(".paopao-area").css("display", "block");
+                    cnt = 1;
+                    var interval = setInterval(function () {
+                        $(".paopao" + cnt).css("display", "block");
+                        if (cnt > 1) {
 
-                        if(cnt == 9) {
-                            clearInterval(interval);
-                            setTimeout(function(){
-                                $(".paopao8").css("display","none");
+                            if (cnt == 9) {
+                                clearInterval(interval);
+                                setTimeout(function () {
+                                    $(".paopao8").css("display", "none");
 
-                                var c = 1;
-                                for(var i=1;i<13;i++) {
-                                    $(".t"+i).css("display","block");
+                                    var c = 1;
+                                    for (var i = 1; i < 13; i++) {
+                                        $(".t" + i).css("display", "block");
 
-                                }
-                                for(var i=1;i<7;i++) {
-                                    $(".z"+i).css("display","block");
-                                }
-                                setTimeout(function(){
-                                    $(".paopao-find.find").show();
-                                },3000);
-                                window.page = setInterval(function(){
+                                    }
+                                    for (var i = 1; i < 7; i++) {
+                                        $(".z" + i).css("display", "block");
+                                    }
+                                    setTimeout(function () {
+                                        $(".paopao-find.find").show();
+                                    }, 3000);
+                                    window.page = setInterval(function () {
 
-                                    $(".p"+(c%2+1)).css("display","none");
-                                    c ++;
-                                    $(".p"+(c%2+1)).css("display","block");
-                                },150);
-                            },1000);
+                                        $(".p" + (c % 2 + 1)).css("display", "none");
+                                        c++;
+                                        $(".p" + (c % 2 + 1)).css("display", "block");
+                                    }, 150);
+                                }, 1000);
 
+                            }
+                            else {
+                                $(".paopao" + (cnt - 1)).css("display", "none");
+                            }
                         }
-                        else {
-                            $(".paopao"+(cnt-1)).css("display","none");
-                        }
-                    }
-                    cnt ++;
-                },200);
-            },1000);
+                        cnt++;
+                    }, 200);
+                }, 1000);
+            }
+            cai_cnt++;
         }
-        cai_cnt ++ ;
     };
     $scope.next = function() {
         var cnt = 1;
@@ -425,7 +433,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                                             $(document).one('touchstart',function(e){
                                                 $(".video-area video")[0].play();
                                                 $(".video-area").css("display","none");
-                                            $(".last-area").css("display","block");
+                                                $(".last-area").css("display","block");
                                             });
 
 
