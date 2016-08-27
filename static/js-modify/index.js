@@ -67,7 +67,14 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
         return '<img class="emoj" src="/moment/static/image/'+emoj+'">';
     };
     $scope.data = [{
-        "username" : "林紫薇",
+        "username" : "马睿",
+        "feed" : "周日晚8点,又双叒有猛料了!深夜“偷吃”的明星都有谁?小老婆们,你们准备好了吗?",
+        "time" : "45分钟前",
+        "avatar" : "/moment/static/image/my-ba4984ddff.jpg",
+        "zans" : ['岳耘朋'],
+        "cais" : ['贾奶靓,','杜海韬,','陈言溪']
+    },{
+        "username" : "林欣茹",
         "feedimage" : '/moment/static/image/linziwei-pic-7e970c079b.jpg',
         "avatar" : '/moment/static/image/linziwei-eeda633037.jpg',
         "feed" : '一晚吃七盒,好幸福~'+get_emoj('emoj-haixiu-b567771f9a.png')+get_emoj('emoj-haixiu-b567771f9a.png'),
@@ -85,7 +92,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
             'message' : '深夜放毒,一人吃,两人补' + get_emoj('emoj-zaijian-b947f2711e.png')
         }]
     },{
-        "username" : "小笼包女",
+        "username" : "陈言溪",
         "feedimage" : "/moment/static/image/xiaolongbaonv-pic-9ca82c7664.jpg",
         "avatar" : "/moment/static/image/xiaolongbaonv-56c559664e.jpg",
         "feed" : "某人给买的夜宵,我是该哭还是该笑啊"+get_emoj('emoj-se-18bb8c2e78.png')+" 不过真的好好吃诶!",
@@ -100,7 +107,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
             'message' : '哎呀我去,不带这样儿诱惑人儿的!'
         }]
     },{
-        "username" : "小赵总",
+        "username" : "赵莉影",
         "feedimage" : '/moment/static/image/xiaozhaozong-pic-9cb28e79c0.jpg',
         "avatar" : '/moment/static/image/xiaozhaozong-bada9e8239.jpg',
         "feed" : '大晚上的,我真的要吃成' +get_emoj('emoj-zhu-3875bc0269.png')+'啦~撑死算工伤吗哈哈哈~',
@@ -116,7 +123,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
         }]
 
     },{
-        "username" : '绵羊兴',
+        "username" : '张意星',
         'feedimage' : '/moment/static/image/mianyangxing-pic-92cc0db303.jpg',
         'avatar' : '/moment/static/image/mianyangxing-7c7cb90beb.jpg',
         'feed' : '诶呦诶,大晚上好罪恶,下不了舌!',
@@ -135,7 +142,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
             'message'　:　'你已经不是小绵羊了,你是大狮子啊......大开口......'
         }]
     },{
-        'username'　:　'小岳岳',
+        'username'　:　'岳耘朋',
         'feedimage'　:　'/moment/static/image/xiaoyueyue-pic-88aecd900f.jpg',
         'avatar'　:　'/moment/static/image/xiaoyueyue-07183705e7.jpg',
         'feed'　:　'啊~五碗,你比空碗多五碗!我的天呐今天晚上好撑!' + get_emoj('emoj-haixiu-b567771f9a.png'),
@@ -147,7 +154,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
             'message' : '瞧你那没出息样儿,五碗就撑死了,为师还比你多三碗' + get_emoj('emoj-haixiu-b567771f9a.png')
         }]
     },{
-        'username' : '逗比亮亮',
+        'username' : '贾奶靓',
         'feedimage'　:　'/moment/static/image/doubiliangliang-pic-6cb70fcd0d.jpg',
         'avatar'　:　'/moment/static/image/doubiliangliang-256ae658b5.jpg',
         'feed'　:　'晚上也停不住嘴啊,真的有那么好吃吗'　+ get_emoj('emoj-yanxia-7519e47572.jpg'),
@@ -163,7 +170,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
         }]
 
     },{
-        'username' : '涛哥',
+        'username' : '杜海韬',
         'feedimage'　:　'/moment/static/image/taoge-pic-68c464c851.jpg',
         'avatar'　:　'/moment/static/image/taoge-f4e372dacd.jpg',
         'feed'　:　'深夜来波福利,不用谢!',

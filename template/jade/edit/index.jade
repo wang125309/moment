@@ -46,9 +46,9 @@ body
 		//img(src="http://img1.imxiaowei.com/bishengyuanloading.gif")
 		audio#audio(src="/moment/static/image/4092.mp3")
 	.friend-list
-		.friend-list-click-area
+		.friend-list-click
 	.discovery
-		.discovery-click-area
+		.discovery-click
 	.moment-area
 		.background-area
 			.username 马睿马同学
@@ -62,7 +62,7 @@ body
 				.username(ng-bind="i.username")
 				.message-body
 					.message(ng-bind-html="i.feed")
-					.pic-area
+					.pic-area(ng-if="i.feedimage")
 						img.pic(ng-src="{{ i.feedimage }}")
 					.last-line
 						.time(ng-bind="i.time")
