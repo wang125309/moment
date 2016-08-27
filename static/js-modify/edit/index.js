@@ -223,7 +223,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                 already_cai = true;
                 caiInterval = setInterval(function () {
                     $scope.do_cai(false);
-                }, 200);
+                }, 10);
             }
             else if (cai_cnt == 2) {
                 $($(".pic-area")[$(".pic-area").length - 2]).addClass("rotate-and-down");
