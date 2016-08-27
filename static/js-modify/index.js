@@ -416,7 +416,6 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                                             var initV1 = function (){
                                                 if (v1.currentTime>0){
                                                     $(".poster").hide();
-                                                    v1.pause();
                                                     v1.removeEventListener("timeupdate", initV1, false);
                                                 }
                                             }
