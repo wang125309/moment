@@ -417,7 +417,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                                                 if (v1.currentTime>0){
                                                     $(".poster").hide();
                                                     v1.pause();
-                                                    v2.removeEventListener("timeupdate", initV1, false);
+                                                    v1.removeEventListener("timeupdate", initV1, false);
                                                 }
                                             }
                                             var v1 = $('.video-area video')[0];
