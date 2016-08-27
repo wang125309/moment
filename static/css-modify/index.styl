@@ -28,17 +28,20 @@
 	0%
 		-webkit-transform: rotate(0deg)
 	20%
-		-webkit-transform: rotate(15deg) translateY(0) translateX(0)
+		-webkit-transform: rotate(5deg) translateY(0) translateX(0)
+		-webkit-transform-origin:left top
+
 	100%
-		-webkit-transform: rotate(15deg) translateY(3rem)  translateX(0)
+		-webkit-transform: rotate(5deg) translateY(3rem)  translateX(0)
 
 @-webkit-keyframes rotate-and-down
 	0%
 		-webkit-transform: rotate(0deg) translateY(0)
 	20%
-		-webkit-transform: rotate(-15deg) translateY(0)  translateX(0)
+		-webkit-transform: rotate(-5deg) translateY(0)  translateX(0)
+		-webkit-transform-origin:right top
 	100%
-		-webkit-transform: rotate(-15deg) translateY(3rem)  translateX(0)
+		-webkit-transform: rotate(-5deg) translateY(3rem)  translateX(0)
 
 @-webkit-keyframes go-out
 	0%
@@ -479,15 +482,24 @@ body
 		left:0
 		width:100%
 		height:100%
+		background('first-6b8337066e.jpg')
 		img
 			width:100%
 			height:100%
+	.friend-list
+		display:none
+		background('friend-list-5758dd68fe.jpg')
+	.discovery
+		display:none
+		background('discovery-fc59e223fc.jpg')
 	.moment-area
 		display:none
 		.background-area
 			background-color: #8FBC8F
 			height:250px
 			position:relative
+			image-wauto('banner-0fac76b8a5.jpg')
+			background-position:bottom center
 			.username
 				font-weight:700
 				color: #ffffff
@@ -505,7 +517,7 @@ body
 					width: 62px
 					height: 62px
 					border:2px solid #fff
-					image-wauto('marui-5f78cfd39e.jpg')
+					image-wauto('my-ba4984ddff.jpg')
 	.friend-area
 		padding: 15px 0
 		position: relative

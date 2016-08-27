@@ -12,7 +12,7 @@ script.
 script(src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js")
 script(src="/moment/static/js/index.js")
 link(href="/moment/static/css/index.css",rel="stylesheet",type="text/css")
-body(ng-controller="Ctrl",ng-cloak)
+body
 	.paopao-area
 		.paopao1
 		.paopao2
@@ -42,9 +42,13 @@ body(ng-controller="Ctrl",ng-cloak)
 		video(poster="/moment/static/image/poster.jpg",src="http://img1.imxiaowei.com/bishengyuanotehr.mp4",preload="auto",x-webkit-airplay="true",webkit-playsinline="true")
 	.last-area
 		img(src="/moment/static/image/last.jpg")
-	.first-page(ng-show="login==true",ng-click="moment_show()")
+	.first-page(ng-show="login==true")
 		//img(src="http://img1.imxiaowei.com/bishengyuanloading.gif")
 		audio#audio(src="/moment/static/image/4092.mp3")
+	.friend-list
+		.friend-list-click-area
+	.discovery
+		.discovery-click-area
 	.moment-area
 		.background-area
 			.username 马睿马同学

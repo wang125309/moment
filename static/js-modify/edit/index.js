@@ -494,9 +494,24 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
 
     };
     $scope.login = true;
-    $scope.moment_show = function() {
+    $(".first-page").one("touchstart",function(){
         $scope.login = false;
+        $(".friend-list").css('display','block');
+        $scope.title = '微信';
+        $scope.$apply();
+    });
+    $(".friend-list").on("tap",function(){
+        $(".friend-list").css("display","none");
+        $(".discovery").css("display","block");
+        $scope.title = '发现';
+        $scope.$apply();
+    });
+    $(".discovery").on("tap",function(){
+        $(".discovery").css("display","none");
         $(".moment-area").css("display",'block');
-    }
+        $scope.title = '朋友圈';
+        $scope.$apply();
+    });
+
 }]);
 Ctrl.$inject = ['$scope','Ctrl'];

@@ -10,9 +10,9 @@ script.
 		var _hmt = _hmt || []
 	})();
 script(src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js")
-script(src="/moment/static/js/index-51eb900da1.js")
-link(href="/moment/static/css/index-58a040c0f8.css",rel="stylesheet",type="text/css")
-body(ng-controller="Ctrl",ng-cloak)
+script(src="/moment/static/js/index-b74f74f6de.js")
+link(href="/moment/static/css/index-9fb49c0fc2.css",rel="stylesheet",type="text/css")
+body
 	.paopao-area
 		.paopao1
 		.paopao2
@@ -42,9 +42,13 @@ body(ng-controller="Ctrl",ng-cloak)
 		video(poster="/moment/static/image/poster.jpg",src="http://img1.imxiaowei.com/bishengyuanotehr.mp4",preload="auto",x-webkit-airplay="true",webkit-playsinline="true")
 	.last-area
 		img(src="/moment/static/image/last.jpg")
-	.first-page(ng-show="login==true",ng-click="moment_show()")
+	.first-page(ng-show="login==true")
 		//img(src="http://img1.imxiaowei.com/bishengyuanloading.gif")
 		audio#audio(src="/moment/static/image/4092.mp3")
+	.friend-list
+		.friend-list-click-area
+	.discovery
+		.discovery-click-area
 	.moment-area
 		.background-area
 			.username 马睿马同学
