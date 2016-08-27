@@ -46,9 +46,23 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
         }(),
         language:(navigator.browserLanguage || navigator.language).toLowerCase()
     };
-    
-    $("#audio").attr("src","/moment/static/image/4092-d1fb441c50.mp3");
-    $("#audio")[0].play();
+    var loadImage = function(url,callback) {
+        var img = new Image();
+        img.src = url;
+        if (img.complete) {
+            callback(img);
+            return;
+        }
+        img.onload = function() {
+            callback(img);
+        }
+    };
+    loadImage('http://img1.imxiaowei.com/bishengyuanloading.gif',function(img){
+        $(".first-page").append($(img));
+        $("#audio").attr("src","/moment/static/image/4092-d1fb441c50.mp3");
+        $("#audio")[0].play();
+    })
+
     var get_emoj = function(emoj) {
         return '<img class="emoj" src="/moment/static/image/'+emoj+'">';
     };
