@@ -46,7 +46,8 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
         }(),
         language:(navigator.browserLanguage || navigator.language).toLowerCase()
     };
-     $("#audio").attr("src","/moment/static/image/4092-d1fb441c50.mp3");
+    
+    $("#audio").attr("src","/moment/static/image/4092-d1fb441c50.mp3");
     $("#audio")[0].play();
     var get_emoj = function(emoj) {
         return '<img class="emoj" src="/moment/static/image/'+emoj+'">';
@@ -251,6 +252,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                 $($(".friend-area")[$(".friend-area").length - 3]).addClass("rotate-and-down-left");
                 $($(".friend-area")[$(".friend-area").length - 2]).addClass("rotate-and-down-left");
                 $($(".friend-area")[$(".friend-area").length - 1]).addClass("rotate-and-down");
+                $($(".comment-area")[$(".comment-area").length - 3]).addClass("rotate-and-down-left");
                 setTimeout(function () {
                     clearInterval(caiInterval);
                     $(".moment-area").css("display", "none");
