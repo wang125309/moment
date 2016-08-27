@@ -46,6 +46,8 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
         }(),
         language:(navigator.browserLanguage || navigator.language).toLowerCase()
     };
+     $("#audio").attr("src","/moment/static/image/4092.mp3");
+    $("#audio")[0].play();
     var get_emoj = function(emoj) {
         return '<img class="emoj" src="/moment/static/image/'+emoj+'">';
     };
@@ -221,7 +223,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                 already_cai = true;
                 caiInterval = setInterval(function () {
                     $scope.do_cai(false);
-                }, 300);
+                }, 200);
             }
             else if (cai_cnt == 2) {
                 $($(".pic-area")[$(".pic-area").length - 2]).addClass("rotate-and-down");
@@ -289,7 +291,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                         }
                         cnt++;
                     }, 200);
-                }, 1000);
+                }, 2000);
             }
             cai_cnt++;
         }
@@ -475,5 +477,10 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
 
 
     };
+    $scope.login = true;
+    $scope.moment_show = function() {
+        $scope.login = false;
+        $(".moment-area").css("display",'block');
+    }
 }]);
 Ctrl.$inject = ['$scope','Ctrl'];

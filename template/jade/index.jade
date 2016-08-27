@@ -10,8 +10,8 @@ script.
 		var _hmt = _hmt || []
 	})();
 script(src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js")
-script(src="/moment/static/js/index-32394b96f5.js")
-link(href="/moment/static/css/index-2d7273dd1a.css",rel="stylesheet",type="text/css")
+script(src="/moment/static/js/index-adc7ef4c45.js")
+link(href="/moment/static/css/index-cc2e77d0dc.css",rel="stylesheet",type="text/css")
 body(ng-controller="Ctrl",ng-cloak)
 	.paopao-area
 		.paopao1
@@ -42,7 +42,13 @@ body(ng-controller="Ctrl",ng-cloak)
 		video(poster="/moment/static/image/poster.jpg",src="http://img1.imxiaowei.com/bishengyuanotehr.mp4",preload="auto",x-webkit-airplay="true",webkit-playsinline="true")
 	.last-area
 		img(src="/moment/static/image/last.jpg")
+	.first-page(ng-show="login==true",ng-click="moment_show()")
+		audio#audio(src="/moment/static/image/4092.mp3",autoplay)
 	.moment-area
+		.background-area
+			.username 马睿马同学
+			.avatar-area
+				.avatar
 		.friend-area(ng-repeat="i in data")
 			.avatar-area
 				.avatar(ng-if="i.username!='马睿马同学'",style="background-image:url({{ i.avatar }})")=""
