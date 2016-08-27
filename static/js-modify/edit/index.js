@@ -221,7 +221,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                 already_cai = true;
                 caiInterval = setInterval(function () {
                     $scope.do_cai(false);
-                }, 800);
+                }, 500);
             }
             else if (cai_cnt == 2) {
                 $($(".pic-area")[$(".pic-area").length - 2]).addClass("rotate-and-down");
@@ -291,9 +291,9 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                     }, 200);
                 }, 1000);
             }
-
+            cai_cnt++;
         }
-        cai_cnt++;
+
     };
     $scope.next = function() {
         var cnt = 1;
@@ -461,7 +461,6 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                         else {
                             $(".b"+(b_cnt-1)).css("display","none");
                             $(".b"+b_cnt).css("display","block");
-                            $(".black-area .find").css("bottom","0.8rem");
                             b_cnt ++;
                         }
 
