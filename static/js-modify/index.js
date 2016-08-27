@@ -399,8 +399,8 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                                         $(".video-area").css("display","block");
                                         var a = document.documentElement.clientHeight, s = document.documentElement.clientWidth;
                                         function d(e, n) {
-                                            var t, i = s / a, r = 320 / 504;
-                                            t = i < r ? a / 504 :s / 320, $(e).css({
+                                            var t, i = s / a, r = 675 / 1088;
+                                            t = i < r ? a / 1088 :s / 675, $(e).css({
                                                 "-webkit-transform-origin":n,
                                                 "transform-origin":n,
                                                 "-webkit-transform":"scale(" + t + ");",
@@ -409,12 +409,21 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                                         }
                                         d(".video-area",'center center');
                                         if(browser.versions.ios) {
+                                            $(".poster").hide();
                                             $(".video-area video")[0].play();
                                         }
                                         else {
+                                            var initV1 = function (){
+                                                if (v1.currentTime>0){
+                                                    $(".poster").hide();
+                                                    //v2.removeEventListener("timeupdate", initV2, false);
+                                                }
+                                            }
+                                            var v1 = $('.video-area video')[0];
+                                            v1.addEventListener("timeupdate", initV1, false);
                                             $(".video-area video").attr("controls",true);
 
-                                            $(document).one('touchmove',function(e){
+                                            $(document).one('touchstart',function(e){
                                                 $(".video-area video")[0].play();
                                             })
                                         }
