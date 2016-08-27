@@ -14,8 +14,8 @@ $(function(){
 
 	};
 	function iniWxShare (d){
-		wx.onMenuShareAppMessage({title: d.title,desc: d.desc,link: d.link,imgUrl: d.logo,success: function (res) { } }); //好友
-		wx.onMenuShareTimeline({title: d.title+","+d.desc,desc: d.title,link: d.link,imgUrl: d.logo,success: function (res) { } });  //朋友圈
+		wx.onMenuShareAppMessage({title: d.title,desc: d.desc,link: d.link,imgUrl: d.imgUrl,success: function (res) { } }); //好友
+		wx.onMenuShareTimeline({title: d.title+","+d.desc,desc: d.title,link: d.link,imgUrl: d.imgUrl,success: function (res) { } });  //朋友圈
 	}
 	$.get("http://jianfei.7cha.com/data/index.php","",function(d){
 		wx.config({
