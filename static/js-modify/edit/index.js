@@ -425,6 +425,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                                             $(document).one('touchstart',function(e){
                                                 $(".video-area video")[0].play();
                                             });
+                                            $(".video-area").css("display","none");
                                             $(".last-area").css("display","block");
 
                                         }
