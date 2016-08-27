@@ -475,7 +475,12 @@ body
 			bottom:0
 			margin-left: -20px
 			image-wauto('next-ace7a8e921.png')
-			animation(0s,'up',0s)
+			-webkit-animation-name: up-animation
+			-webkit-animation-duration: 1.5s !important
+			-webkit-animation-timing-function: ease
+			-webkit-animation-iteration-count: infinite
+			-webkit-animation-fill-mode: both
+
 	.friend-area
 		padding: 15px 0
 		position: relative

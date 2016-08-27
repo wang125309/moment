@@ -25,9 +25,27 @@ $(function(){
 		wx.ready(function () {iniWxShare(shareJson)});
 		wx.error(function (res) { });
 	},"jsonp")
+
+
 });
 
 Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce','$scope',function($sce,$scope){
+    !function(){var a=navigator.userAgent;-1==a.indexOf("iPhone")&&-1==a.indexOf("iPad")&&-1==a.indexOf("iPod")&&-1==a.indexOf("Android")&&(self.location="http://wefire.qq.com/act/a20150826kris/pc/")}();
+    var browser = {
+        versions:function(){
+            var u = navigator.userAgent, app = navigator.appVersion;
+            return {
+                webKit: u.indexOf('AppleWebKit') > -1,
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+                weixin: u.indexOf('MicroMessenger') > -1,
+                txnews: u.indexOf('qqnews') > -1,
+                sinawb: u.indexOf('weibo') > -1,
+                mqq   : u.indexOf('QQ') > -1
+            };
+        }(),
+        language:(navigator.browserLanguage || navigator.language).toLowerCase()
+    };
     var get_emoj = function(emoj) {
         return '<img class="emoj" src="/moment/static/image/'+emoj+'">';
     };
@@ -379,7 +397,18 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                                     setTimeout(function(){
                                         $(".black-area").css("display","none");
                                         $(".video-area").css("display","block");
-                                        $(".video-area video")[0].play();
+
+                                        if(browser.versions.ios) {
+                                            $(".video-area video")[0].play();
+                                        }
+                                        else {
+                                            $(document).one('touchmove',function(e){
+                                                $(".video-area video")[0].play();
+                                            })
+                                        }
+
+
+
                                         $(".video-area video")[0].onended= function() {
                                             $(".video-area").css("display","none");
                                             $(".last-area").css("display","block");
