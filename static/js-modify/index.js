@@ -90,86 +90,6 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
             "message" : "楼上队形错了!求不爆料!"
         }]
     },{
-        "username" : "林欣茹",
-        "feedimage" : '/moment/static/image/linziwei-pic-7e970c079b.jpg',
-        "avatar" : '/moment/static/image/linziwei-eeda633037.jpg',
-        "feed" : '一晚吃七盒,好幸福~'+get_emoj('emoj-haixiu-b567771f9a.png')+get_emoj('emoj-haixiu-b567771f9a.png'),
-        "time": '20分钟前',
-        "zans" : ['老干部华华'],
-        "cais"　:　['佛爷霆,','有朋自远方来'],
-        "comment" : [{
-            'username' : '老干部华华:',
-            'message' : '多吃点,爱你 ' + get_emoj('emoj-qinqin-68dcb9e7c9.png')
-        },{
-            'username' : '范爷:',
-            'message' : '这碗狗粮我干了!看来得让黑牛好好学着点!' + get_emoj('emoj-zuohengheng-08547b0438.png') + get_emoj('emoj-zuohengheng-08547b0438.png')
-        },{
-            'username' : '有朋自远方来:',
-            'message' : '深夜放毒,一人吃,两人补' + get_emoj('emoj-zaijian-b947f2711e.png')
-        }]
-    },{
-        "username" : "陈言溪",
-        "feedimage" : "/moment/static/image/xiaolongbaonv-pic-9ca82c7664.jpg",
-        "avatar" : "/moment/static/image/xiaolongbaonv-56c559664e.jpg",
-        "feed" : "某人给买的夜宵,我是该哭还是该笑啊"+get_emoj('emoj-se-18bb8c2e78.png')+" 不过真的好好吃诶!",
-        "time" : '20分钟前',
-        "zans" : ['陈过儿'],
-        "cais"　:　['贾大玲'],
-        "comment" : [{
-            'username' : '陈过儿:',
-            'message' : '姑姑开心就好,过儿天天买给你吃!'
-        },{
-            'username' : '贾大玲:',
-            'message' : '哎呀我去,不带这样儿诱惑人儿的!'
-        }]
-    },{
-        "username" : "赵莉影",
-        "feedimage" : '/moment/static/image/xiaozhaozong-pic-a119a2dce7.jpg',
-        "avatar" : '/moment/static/image/xiaozhaozong-bada9e8239.jpg',
-        "feed" : '大晚上的,我真的要吃成' +get_emoj('emoj-zhu-3875bc0269.png')+'啦~撑死算工伤吗哈哈哈~',
-        'time' : '20分钟前',
-        "zans" : ['塘主翰'],
-        "cais"　:　['佛爷霆'],
-        "comment" : [{
-            "username" : '塘主翰:',
-            "message" : '不是给你承包鱼塘吗?多打点鱼吃。'
-        },{
-            "username" : "佛爷霆:",
-            "message" : "吃,你开心就好,反正也吃不胖!"
-        }]
-
-    },{
-        "username" : '张意星',
-        'feedimage' : '/moment/static/image/mianyangxing-pic-92cc0db303.jpg',
-        'avatar' : '/moment/static/image/mianyangxing-7c7cb90beb.jpg',
-        'feed' : '诶呦诶,大晚上好罪恶,下不了舌!',
-        'time' : '20分钟前',
-        "zans" : ['抠门迅,','朱碧石'],
-        "cais"　:　['神算磊'],
-        'comment' : [{
-            'username' : '抠门迅:',
-            'message' : '哎呀你怎么这么抠啊, 就自己吃不给我来点' + get_emoj('emoj-weiqu-ad145ab95e.png')
-
-        },{
-            'username' : '朱碧石:',
-            'message' : '你不要脸（请自行想象我的表情包谢谢'+get_emoj('emoj-weixiao-a5c6ad9623.png')+'）'
-        },{
-            'username'　:　'神算磊:',
-            'message'　:　'你已经不是小绵羊了,你是大狮子啊......大开口......'
-        }]
-    },{
-        'username'　:　'岳耘朋',
-        'feedimage'　:　'/moment/static/image/xiaoyueyue-pic-88aecd900f.jpg',
-        'avatar'　:　'/moment/static/image/xiaoyueyue-07183705e7.jpg',
-        'feed'　:　'啊~五碗,你比空碗多五碗!我的天呐今天晚上好撑!' + get_emoj('emoj-haixiu-b567771f9a.png'),
-        'time' : '20分钟前',
-        "zans" : ['liu留,','海海,','绵绵,','酸菜'],
-        "cais"　:　['郭奶奶'],
-        'comment' : [{
-            'username' : '郭奶奶:',
-            'message' : '瞧你那没出息样儿,五碗就撑死了,为师还比你多三碗' + get_emoj('emoj-haixiu-b567771f9a.png')
-        }]
-    },{
         'username' : '贾奶靓',
         'feedimage'　:　'/moment/static/image/doubiliangliang-pic-6cb70fcd0d.jpg',
         'avatar'　:　'/moment/static/image/doubiliangliang-256ae658b5.jpg',
@@ -525,16 +445,17 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
     });
     $(".friend-list").on("tap",function(){
         $(".friend-list").css("display","none");
-        $(".discovery").css("display","block");
+        // $(".discovery").css("display","block");
+        $(".moment-area").css("display",'block');
         $scope.title = '发现';
         $scope.$apply();
     });
-    $(".discovery").on("tap",function(){
-        $(".discovery").css("display","none");
-        $(".moment-area").css("display",'block');
-        $scope.title = '朋友圈';
-        $scope.$apply();
-    });
+    // $(".discovery").on("tap",function(){
+    //     $(".discovery").css("display","none");
+    //     $(".moment-area").css("display",'block');
+    //     $scope.title = '朋友圈';
+    //     $scope.$apply();
+    // });
 
 }]);
 Ctrl.$inject = ['$scope','Ctrl'];

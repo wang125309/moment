@@ -90,86 +90,6 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
             "message" : "楼上队形错了!求不爆料!"
         }]
     },{
-        "username" : "林欣茹",
-        "feedimage" : '/moment/static/image/linziwei-pic.jpg',
-        "avatar" : '/moment/static/image/linziwei.jpg',
-        "feed" : '一晚吃七盒,好幸福~'+get_emoj('emoj-haixiu.png')+get_emoj('emoj-haixiu.png'),
-        "time": '20分钟前',
-        "zans" : ['老干部华华'],
-        "cais"　:　['佛爷霆,','有朋自远方来'],
-        "comment" : [{
-            'username' : '老干部华华:',
-            'message' : '多吃点,爱你 ' + get_emoj('emoj-qinqin.png')
-        },{
-            'username' : '范爷:',
-            'message' : '这碗狗粮我干了!看来得让黑牛好好学着点!' + get_emoj('emoj-zuohengheng.png') + get_emoj('emoj-zuohengheng.png')
-        },{
-            'username' : '有朋自远方来:',
-            'message' : '深夜放毒,一人吃,两人补' + get_emoj('emoj-zaijian.png')
-        }]
-    },{
-        "username" : "陈言溪",
-        "feedimage" : "/moment/static/image/xiaolongbaonv-pic.jpg",
-        "avatar" : "/moment/static/image/xiaolongbaonv.jpg",
-        "feed" : "某人给买的夜宵,我是该哭还是该笑啊"+get_emoj('emoj-se.png')+" 不过真的好好吃诶!",
-        "time" : '20分钟前',
-        "zans" : ['陈过儿'],
-        "cais"　:　['贾大玲'],
-        "comment" : [{
-            'username' : '陈过儿:',
-            'message' : '姑姑开心就好,过儿天天买给你吃!'
-        },{
-            'username' : '贾大玲:',
-            'message' : '哎呀我去,不带这样儿诱惑人儿的!'
-        }]
-    },{
-        "username" : "赵莉影",
-        "feedimage" : '/moment/static/image/xiaozhaozong-pic.jpg',
-        "avatar" : '/moment/static/image/xiaozhaozong.jpg',
-        "feed" : '大晚上的,我真的要吃成' +get_emoj('emoj-zhu.png')+'啦~撑死算工伤吗哈哈哈~',
-        'time' : '20分钟前',
-        "zans" : ['塘主翰'],
-        "cais"　:　['佛爷霆'],
-        "comment" : [{
-            "username" : '塘主翰:',
-            "message" : '不是给你承包鱼塘吗?多打点鱼吃。'
-        },{
-            "username" : "佛爷霆:",
-            "message" : "吃,你开心就好,反正也吃不胖!"
-        }]
-
-    },{
-        "username" : '张意星',
-        'feedimage' : '/moment/static/image/mianyangxing-pic.jpg',
-        'avatar' : '/moment/static/image/mianyangxing.jpg',
-        'feed' : '诶呦诶,大晚上好罪恶,下不了舌!',
-        'time' : '20分钟前',
-        "zans" : ['抠门迅,','朱碧石'],
-        "cais"　:　['神算磊'],
-        'comment' : [{
-            'username' : '抠门迅:',
-            'message' : '哎呀你怎么这么抠啊, 就自己吃不给我来点' + get_emoj('emoj-weiqu.png')
-
-        },{
-            'username' : '朱碧石:',
-            'message' : '你不要脸（请自行想象我的表情包谢谢'+get_emoj('emoj-weixiao.png')+'）'
-        },{
-            'username'　:　'神算磊:',
-            'message'　:　'你已经不是小绵羊了,你是大狮子啊......大开口......'
-        }]
-    },{
-        'username'　:　'岳耘朋',
-        'feedimage'　:　'/moment/static/image/xiaoyueyue-pic.jpg',
-        'avatar'　:　'/moment/static/image/xiaoyueyue.jpg',
-        'feed'　:　'啊~五碗,你比空碗多五碗!我的天呐今天晚上好撑!' + get_emoj('emoj-haixiu.png'),
-        'time' : '20分钟前',
-        "zans" : ['liu留,','海海,','绵绵,','酸菜'],
-        "cais"　:　['郭奶奶'],
-        'comment' : [{
-            'username' : '郭奶奶:',
-            'message' : '瞧你那没出息样儿,五碗就撑死了,为师还比你多三碗' + get_emoj('emoj-haixiu.png')
-        }]
-    },{
         'username' : '贾奶靓',
         'feedimage'　:　'/moment/static/image/doubiliangliang-pic.jpg',
         'avatar'　:　'/moment/static/image/doubiliangliang.jpg',
@@ -525,16 +445,17 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
     });
     $(".friend-list").on("tap",function(){
         $(".friend-list").css("display","none");
-        $(".discovery").css("display","block");
+        // $(".discovery").css("display","block");
+        $(".moment-area").css("display",'block');
         $scope.title = '发现';
         $scope.$apply();
     });
-    $(".discovery").on("tap",function(){
-        $(".discovery").css("display","none");
-        $(".moment-area").css("display",'block');
-        $scope.title = '朋友圈';
-        $scope.$apply();
-    });
+    // $(".discovery").on("tap",function(){
+    //     $(".discovery").css("display","none");
+    //     $(".moment-area").css("display",'block');
+    //     $scope.title = '朋友圈';
+    //     $scope.$apply();
+    // });
 
 }]);
 Ctrl.$inject = ['$scope','Ctrl'];
