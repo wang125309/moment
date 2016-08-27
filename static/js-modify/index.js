@@ -416,16 +416,17 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                                             var initV1 = function (){
                                                 if (v1.currentTime>0){
                                                     $(".poster").hide();
-                                                    //v2.removeEventListener("timeupdate", initV2, false);
+                                                    v1.pause();
+                                                    v2.removeEventListener("timeupdate", initV1, false);
                                                 }
                                             }
                                             var v1 = $('.video-area video')[0];
                                             v1.addEventListener("timeupdate", initV1, false);
-                                            $(".video-area video").attr("controls",true);
 
                                             $(document).one('touchstart',function(e){
                                                 $(".video-area video")[0].play();
-                                            })
+                                            });
+
                                         }
 
 
