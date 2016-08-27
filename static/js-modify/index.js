@@ -124,7 +124,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
         }]
     },{
         "username" : "赵莉影",
-        "feedimage" : '/moment/static/image/xiaozhaozong-pic-9cb28e79c0.jpg',
+        "feedimage" : '/moment/static/image/xiaozhaozong-pic-a119a2dce7.jpg',
         "avatar" : '/moment/static/image/xiaozhaozong-bada9e8239.jpg',
         "feed" : '大晚上的,我真的要吃成' +get_emoj('emoj-zhu-3875bc0269.png')+'啦~撑死算工伤吗哈哈哈~',
         'time' : '20分钟前',
