@@ -8,7 +8,7 @@ require("../../bower_components/angular-touch/angular-touch.min.js");
 $(function(){
 	var shareJson = {
 		link:"http://jianfei.7cha.com/moment/",
-		imgUrl:"http://jianfei.7cha.com/moment/static/image/share-image.jpg",
+		imgUrl:"http://jianfei.7cha.com/moment/static/image/share-image.png",
 		title:"慎点！关八会长的朋友圈有毒……",
 		desc:"关八会长深夜放毒，明星“偷吃”亟待拯救"
 
