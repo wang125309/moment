@@ -72,7 +72,23 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
         "time" : "45分钟前",
         "avatar" : "/moment/static/image/my-ba4984ddff.jpg",
         "zans" : ['岳耘朋'],
-        "cais" : ['贾奶靓,','杜海韬,','陈言溪']
+        "cais" : ['贾奶靓,','杜海韬,','陈言溪'],
+        "comment" : [{
+            "username" : "赵莉影:",
+            "message" : "求不爆料!"
+        },{
+            "username" : "张意星:",
+            "message" : "求不爆料!"
+        },{
+            "username" : "岳耘朋:",
+            "message" : "求不爆料!"
+        },{
+            "username" : "贾奶靓:",
+            "message" : "不要爆料啊!"
+        },{
+            "username" : "杜海韬:",
+            "message" : "楼上队形错了!求不爆料!"
+        }]
     },{
         "username" : "林欣茹",
         "feedimage" : '/moment/static/image/linziwei-pic-7e970c079b.jpg',
