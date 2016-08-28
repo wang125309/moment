@@ -128,6 +128,19 @@
 		-webkit-transform :scale(1)
 	100%
 		-webkit-transform:scale(0)
+
+@-webkit-keyframes up-animation
+	0%,100%
+		-webkit-transform:scale(1)
+		opacity: .9
+	1%,99%
+		-webkit-transform:translateY(0)
+	49%
+		-webkit-transform:translateY(-15px)
+	50%
+		opacity:0
+		-webkit-transform:scale(0.2)
+
 animation(time, name, delay)
 	-webkit-animation-duration: time
 	-webkit-animation-name: name
@@ -487,6 +500,20 @@ body
 			z-index:10
 			background-color:rgba(0,0,0,0.8)
 			image-wauto('share-text-f428152194.png')
+		.next
+			image-wauto('next-ace7a8e921.png')
+			z-index:9
+			width: 0.06rem
+			height: 0.1rem
+			right: 10px
+			margin-left: -0.05rem
+			bottom:0.01rem
+			position:fixed
+			-webkit-animation-name: up-animation
+			-webkit-animation-duration: 1.5s !important
+			-webkit-animation-timing-function: ease
+			-webkit-animation-iteration-count: infinite
+			-webkit-animation-fill-mode: both
 	.first-page
 		position:absolute
 		top:0

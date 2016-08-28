@@ -67,7 +67,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
         return '<img class="emoj" src="/moment/static/image/'+emoj+'">';
     };
     $scope.data = [{
-        "username" : "马睿",
+        "username" : "会长",
         "feed" : "周日晚8点,又双叒有猛料了!深夜“偷吃”的明星都有谁?小老婆们,你们准备好了吗?",
         "time" : "45分钟前",
         "avatar" : "/moment/static/image/my.jpg",
@@ -128,7 +128,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
         }]
 
     },{
-        'username' : '马睿马社长',
+        'username' : '会长',
         'feedimage'　:　'/moment/static/image/marui-pic.jpg',
         'avatar'　:　'/moment/static/image/marui.jpg',
         'feed'　:　'二毛,你看朕的吃相帅不帅啊?',
@@ -157,7 +157,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
     });
     $scope.cai = false;
     $scope.pull_out_menu = function(i) {
-        if (i.username == '马睿马社长') {
+        if (i.username == '会长') {
             $($('.pull-out-menu')[$('.pull-out-menu').length-1]).css("display","block");
             $scope.shake　=　false;
             setTimeout(function(){

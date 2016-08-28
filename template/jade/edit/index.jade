@@ -46,6 +46,7 @@ body
 		div.share-btn(ng-click="share=!share")=""
 		img.qrcode(src="/moment/static/image/qrcode.jpg")
 		div.share-message(ng-show="share==true",ng-click="share=!share")=""
+		.next
 	.first-page(ng-show="login==true")
 		//img(src="http://img1.imxiaowei.com/bishengyuanloading.gif")
 		audio#audio(src="/moment/static/image/4092.mp3")
@@ -55,13 +56,13 @@ body
 		.discovery-click
 	.moment-area
 		.background-area
-			.username 马睿马社长
+			.username 会长
 			.avatar-area
 				.avatar
 		.friend-area(ng-repeat="i in data")
 			.avatar-area
-				.avatar(ng-if="i.username!='马睿马社长'",style="background-image:url({{ i.avatar }})")=""
-				.avatar.changeableavatar(ng-if="i.username=='马睿马社长'",style="background-image:url({{ i.avatar }})")=""
+				.avatar(ng-if="i.feed!='二毛,你看朕的吃相帅不帅啊?'",style="background-image:url({{ i.avatar }})")=""
+				.avatar.changeableavatar(ng-if="i.feed=='二毛,你看朕的吃相帅不帅啊?'",style="background-image:url({{ i.avatar }})")=""
 			.message-area
 				.username(ng-bind="i.username")
 				.message-body
@@ -71,12 +72,12 @@ body
 					.last-line
 						.time(ng-bind="i.time")
 						.pull-out(ng-click="pull_out_menu(i)")
-							.find(ng-click="pull_out_menu(i)",ng-if="i.username=='马睿马社长'",ng-show="shake==true")=""
+							.find(ng-click="pull_out_menu(i)",ng-if="i.feed=='二毛,你看朕的吃相帅不帅啊?'",ng-show="shake==true")=""
 							.overflow
 								.pull-out-menu
 									.cell
 										.cai(ng-click="do_cai()")=""
-										.find(ng-click="do_cai()",ng-if="i.username=='马睿马社长'",ng-show="cai==true")=""
+										.find(ng-click="do_cai()",ng-if="i.feed=='二毛,你看朕的吃相帅不帅啊?'",ng-show="cai==true")=""
 									.cell
 										.zan=""
 									.cell
