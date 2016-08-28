@@ -467,15 +467,26 @@ body
 		background-size:cover
 		z-index:10
 	.last-area
-		position:absolute
 		width:100%
-		height:100%
-		left:0
-		top:0
 		display:none
-		img
+		.last
 			width:100%
+		.share-btn
+			width:0.5rem
+			margin:0 auto
+			height: 0.3rem
+			image-wauto('share-btn-c3ec37eb7c.jpg')
+		.qrcode
+			width:100%
+		.share-message
+			width:100%
+			position:fixed
+			top:0
+			left:0
 			height:100%
+			z-index:10
+			background-color:rgba(0,0,0,0.8)
+			image-wauto('share-text-f428152194.png')
 	.first-page
 		position:absolute
 		top:0

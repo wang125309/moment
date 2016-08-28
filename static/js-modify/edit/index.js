@@ -166,7 +166,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
             },1000);
         }
     };
-
+    $scope.share = false;
     var cai_cnt = 0;
     var already_cai = false;
     $scope.do_cai = function(auto) {

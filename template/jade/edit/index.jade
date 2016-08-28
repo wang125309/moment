@@ -13,7 +13,7 @@ script(src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js")
 script(src="/moment/static/js/index.js")
 link(href="/moment/static/css/index.css",rel="stylesheet",type="text/css")
 body
-	audio#paopao-music(src="/moment/static/image/paopao.mp3",loop="loop")
+	audio#paopao-music(src="/moment/static/image/paopao.mp3")
 	.paopao-area
 		.paopao1
 		.paopao2
@@ -42,7 +42,10 @@ body
 		.poster
 		video(poster="/moment/static/image/poster.jpg",src="http://img1.imxiaowei.com/bishengyuanotehr.mp4",preload="auto",x-webkit-airplay="true",webkit-playsinline="true")
 	.last-area
-		img(src="/moment/static/image/last.jpg")
+		img.last(src="/moment/static/image/last.jpg")
+		div.share-btn(ng-click="share=!share")=""
+		img.qrcode(src="/moment/static/image/qrcode.jpg")
+		div.share-message(ng-show="share==true",ng-click="share=!share")=""
 	.first-page(ng-show="login==true")
 		//img(src="http://img1.imxiaowei.com/bishengyuanloading.gif")
 		audio#audio(src="/moment/static/image/4092.mp3")
