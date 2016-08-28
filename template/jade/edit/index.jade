@@ -13,6 +13,7 @@ script(src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js")
 script(src="/moment/static/js/index.js")
 link(href="/moment/static/css/index.css",rel="stylesheet",type="text/css")
 body
+	audio#paopao-music(src="/moment/static/image/paopao.mp3",loop="loop")
 	.paopao-area
 		.paopao1
 		.paopao2
@@ -51,13 +52,13 @@ body
 		.discovery-click
 	.moment-area
 		.background-area
-			.username 马睿马同学
+			.username 马睿马社长
 			.avatar-area
 				.avatar
 		.friend-area(ng-repeat="i in data")
 			.avatar-area
-				.avatar(ng-if="i.username!='马睿马同学'",style="background-image:url({{ i.avatar }})")=""
-				.avatar.changeableavatar(ng-if="i.username=='马睿马同学'",style="background-image:url({{ i.avatar }})")=""
+				.avatar(ng-if="i.username!='马睿马社长'",style="background-image:url({{ i.avatar }})")=""
+				.avatar.changeableavatar(ng-if="i.username=='马睿马社长'",style="background-image:url({{ i.avatar }})")=""
 			.message-area
 				.username(ng-bind="i.username")
 				.message-body
@@ -67,12 +68,12 @@ body
 					.last-line
 						.time(ng-bind="i.time")
 						.pull-out(ng-click="pull_out_menu(i)")
-							.find(ng-click="pull_out_menu(i)",ng-if="i.username=='马睿马同学'",ng-show="shake==true")=""
+							.find(ng-click="pull_out_menu(i)",ng-if="i.username=='马睿马社长'",ng-show="shake==true")=""
 							.overflow
 								.pull-out-menu
 									.cell
 										.cai(ng-click="do_cai()")=""
-										.find(ng-click="do_cai()",ng-if="i.username=='马睿马同学'",ng-show="cai==true")=""
+										.find(ng-click="do_cai()",ng-if="i.username=='马睿马社长'",ng-show="cai==true")=""
 									.cell
 										.zan=""
 									.cell

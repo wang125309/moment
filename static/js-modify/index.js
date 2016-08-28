@@ -128,7 +128,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
         }]
 
     },{
-        'username' : '马睿马同学',
+        'username' : '马睿马社长',
         'feedimage'　:　'/moment/static/image/marui-pic-2253217505.jpg',
         'avatar'　:　'/moment/static/image/marui-5f78cfd39e.jpg',
         'feed'　:　'二毛,你看朕的吃相帅不帅啊?',
@@ -157,7 +157,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
     });
     $scope.cai = false;
     $scope.pull_out_menu = function(i) {
-        if (i.username == '马睿马同学') {
+        if (i.username == '马睿马社长') {
             $($('.pull-out-menu')[$('.pull-out-menu').length-1]).css("display","block");
             $scope.shake　=　false;
             setTimeout(function(){
@@ -214,6 +214,8 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                     clearInterval(caiInterval);
                     $(".moment-area").css("display", "none");
                     $(".paopao-area").css("display", "block");
+                    $("#paopao-music").attr("src","/moment/static/image/paopao-218d067b1a.mp3");
+                    $("#paopao-music")[0].play();
                     cnt = 1;
                     var interval = setInterval(function () {
                         $(".paopao" + cnt).css("display", "block");
@@ -370,6 +372,7 @@ Ctrl = angular.module('app',['ngSanitize','ngTouch']).controller('Ctrl',['$sce',
                                     $(".black-hole").css("display","block");
                                     setTimeout(function(){
                                         $(".black-area").css("display","none");
+                                        $("#paopao-music")[0].pause();
                                         $(".video-area").css("display","block");
                                         var a = document.documentElement.clientHeight, s = document.documentElement.clientWidth;
                                         function d(e, n) {
